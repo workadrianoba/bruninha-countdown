@@ -161,6 +161,11 @@
 
   <div class="timer" id="timer">
     <div class="unit">
+      <span class="value" id="days">00</span>
+      <span class="label">Dias</span>
+    </div>
+    <div class="separator">:</div>
+    <div class="unit">
       <span class="value" id="hours">00</span>
       <span class="label">Horas</span>
     </div>
@@ -195,9 +200,7 @@
   </div>
 
   <script>
-    // 2026-08-20 01:00:00 horário de Brasília (UTC-3)
-    // Equivale a 2026-08-20T04:00:00Z em UTC
-    const TARGET = new Date('2026-08-20T04:00:00Z');
+    const TARGET = new Date('2026-08-20T01:00:00-03:00');
 
     // Data de referência para a barra de progresso:
     // usamos o momento em que a página foi aberta (ou poderia ser uma data de início fixa)
@@ -219,10 +222,12 @@
       }
 
       const totalSeconds = Math.floor(diff / 1000);
-      const hours   = Math.floor(totalSeconds / 3600);
+      const days    = Math.floor(totalSeconds / 86400);
+      const hours   = Math.floor((totalSeconds % 86400) / 3600);
       const minutes = Math.floor((totalSeconds % 3600) / 60);
       const seconds = totalSeconds % 60;
 
+      document.getElementById('days').textContent    = pad(days);
       document.getElementById('hours').textContent   = pad(hours);
       document.getElementById('minutes').textContent = pad(minutes);
       document.getElementById('seconds').textContent = pad(seconds);
