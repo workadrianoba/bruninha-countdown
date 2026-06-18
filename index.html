@@ -192,6 +192,44 @@
     </div>
   </div>
 
+  <h1>Contagem Regressiva Floripa</h1>
+  <p class="target-date">21 de novembro de 2026 &mdash; 01:00 (Brasília)</p>
+
+  <div class="timer" id="timer3">
+    <div class="unit">
+      <span class="value" id="days3">00</span>
+      <span class="label">Dias</span>
+    </div>
+    <div class="separator">:</div>
+    <div class="unit">
+      <span class="value" id="hours3">00</span>
+      <span class="label">Horas</span>
+    </div>
+    <div class="separator">:</div>
+    <div class="unit">
+      <span class="value" id="minutes3">00</span>
+      <span class="label">Minutos</span>
+    </div>
+    <div class="separator">:</div>
+    <div class="unit">
+      <span class="value" id="seconds3">00</span>
+      <span class="label">Segundos</span>
+    </div>
+  </div>
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar3"></div>
+  </div>
+
+  <div class="expired" id="expired3">
+    <div class="expired-emoji">🏝️</div>
+    <div class="expired-title">Bem-vindos a Floripa!</div>
+    <div class="expired-text">
+      Ilha da Magia, e nós dois nela.<br>
+      Mais uma página da nossa história começando agora.
+    </div>
+  </div>
+
   <h1>Contagem Regressiva Cruzeiro</h1>
   <p class="target-date">31 de janeiro de 2027 &mdash; 01:00 (Brasília)</p>
 
@@ -227,6 +265,44 @@
     <div class="expired-text">
       A aventura que tanto esperamos finalmente chegou.<br>
       O mar nos chama — vamos juntos.
+    </div>
+  </div>
+
+  <h1>Contagem Regressiva Europa</h1>
+  <p class="target-date">22 de maio de 2027 &mdash; 01:00 (Brasília)</p>
+
+  <div class="timer" id="timer4">
+    <div class="unit">
+      <span class="value" id="days4">00</span>
+      <span class="label">Dias</span>
+    </div>
+    <div class="separator">:</div>
+    <div class="unit">
+      <span class="value" id="hours4">00</span>
+      <span class="label">Horas</span>
+    </div>
+    <div class="separator">:</div>
+    <div class="unit">
+      <span class="value" id="minutes4">00</span>
+      <span class="label">Minutos</span>
+    </div>
+    <div class="separator">:</div>
+    <div class="unit">
+      <span class="value" id="seconds4">00</span>
+      <span class="label">Segundos</span>
+    </div>
+  </div>
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar4"></div>
+  </div>
+
+  <div class="expired" id="expired4">
+    <div class="expired-emoji">✈️</div>
+    <div class="expired-title">Bonjour, Europa!</div>
+    <div class="expired-text">
+      Mais um continente, mais uma aventura nossa.<br>
+      Vamos explorar o mundo juntos, Bruna.
     </div>
   </div>
 
@@ -272,9 +348,19 @@
       progressBar: 'progressBar1', expired: 'expired1'
     });
 
+    createCountdown('2026-11-21T01:00:00-03:00', {
+      timer: 'timer3', days: 'days3', hours: 'hours3', minutes: 'minutes3', seconds: 'seconds3',
+      progressBar: 'progressBar3', expired: 'expired3'
+    });
+
     createCountdown('2027-01-31T01:00:00-03:00', {
       timer: 'timer2', days: 'days2', hours: 'hours2', minutes: 'minutes2', seconds: 'seconds2',
       progressBar: 'progressBar2', expired: 'expired2'
+    });
+
+    createCountdown('2027-05-22T01:00:00-03:00', {
+      timer: 'timer4', days: 'days4', hours: 'hours4', minutes: 'minutes4', seconds: 'seconds4',
+      progressBar: 'progressBar4', expired: 'expired4'
     });
   </script>
 
